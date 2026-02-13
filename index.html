@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rwandaballers Basketball Camp | Bridging Continents, Building Legacies</title>
+    <meta name="description" content="Elite basketball training camp in Kigali, Rwanda. Connecting African talent with global opportunities through professional coaching, international exposure, and community impact.">
+    <meta property="og:title" content="Rwandaballers Basketball Camp">
+    <meta property="og:description" content="Elite basketball training camp in Kigali, Rwanda. Bridging Continents, Building Legacies.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary: #FDC82F;
+            --primary-dark: #e5b429;
+            --background: #0a0a0a;
+            --background-card: #141414;
+            --foreground: #fafafa;
+            --muted: #a1a1aa;
+            --border: #27272a;
+            --glow: rgba(253, 200, 47, 0.4);
+        }
+
+        /* Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        /* Utility Classes */
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, #fff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glow {
+            box-shadow: 0 0 30px var(--glow), 0 0 60px rgba(253, 200, 47, 0.2);
+        }
+
+        .glow-sm {
+            box-shadow: 0 0 15px var(--glow);
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 0.5rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--background);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid rgba(253, 200, 47, 0.5);
+            color: var(--foreground);
+        }
+
+        .btn-outline:hover {
+            background-color: rgba(253, 200, 47, 0.1);
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .navbar-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .navbar-inner {
+                height: 5rem;
+            }
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        @media (min-width: 768px) {
+            .logo {
+                font-size: 1.5rem;
+            }
+        }
+
+        .logo-primary {
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .nav-links {
+                display: flex;
+            }
+        }
+
+        .nav-link {
+            color: var(--muted);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: block;
+            padding: 0.5rem;
+            background: none;
+            border: none;
+            color: var(--foreground);
+            cursor: pointer;
+        }
+
+        @media (min-width: 768px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 40;
+            background-color: var(--background);
+            padding-top: 5rem;
+        }
+
+        .mobile-menu.open {
+            display: block;
+        }
+
+        .mobile-menu-inner {
+            padding: 2rem 1rem;
+        }
+
+        .mobile-nav-link {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 1rem 0;
+            color: var(--foreground);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-link:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 6rem 0 4rem;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+        }
+
+        .hero-gradient {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at top, rgba(253, 200, 47, 0.15) 0%, transparent 50%);
+        }
+
+        .hero-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero-orb-1 {
+            top: 20%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(253, 200, 47, 0.3);
+        }
+
+        .hero-orb-2 {
+            bottom: 20%;
+            right: 10%;
+            width: 400px;
+            height: 400px;
+            background: rgba(253, 200, 47, 0.2);
+            animation-delay: -4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: rgba(253, 200, 47, 0.1);
+            border: 1px solid rgba(253, 200, 47, 0.3);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 10px rgba(253, 200, 47, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(253, 200, 47, 0.5); }
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .hero-title {
+                font-size: 5rem;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: var(--muted);
+            margin-bottom: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+        }
+
+        .hero-date {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            font-size: 0.875rem;
+            color: var(--muted);
+        }
+
+        .hero-date-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .hero-date-item svg {
+            width: 1rem;
+            height: 1rem;
+            color: var(--primary);
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .hero-video {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-video iframe {
+            width: 100%;
+            aspect-ratio: 16/9;
+            display: block;
+        }
+
+        .social-proof {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .social-proof a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--background-card);
+            border: 1px solid var(--border);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .social-proof a:hover {
+            border-color: var(--primary);
+        }
+
+        .social-proof svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: var(--primary);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--muted);
+            font-size: 0.75rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* Vision Section */
+        .vision {
+            padding: 6rem 0;
+            background-color: var(--background-card);
+        }
+
+        .vision-grid {
+            display: grid;
+            gap: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            .vision-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                align-items: center;
+            }
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .section-title {
+                font-size: 3rem;
+            }
+        }
+
+        .vision-text {
+            color: var(--muted);
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .vision-text.highlight {
+            color: var(--foreground);
+            font-weight: 500;
+        }
+
+        .founder-card {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .founder-avatar {
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background: rgba(253, 200, 47, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .founder-name {
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+
+        .founder-role {
+            color: var(--muted);
+            font-size: 0.875rem;
+        }
+
+        .founder-locations {
+            color: var(--primary);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .mission-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .mission-card {
+            padding: 1.5rem;
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            display: flex;
+            gap: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .mission-card:hover {
+            border-color: rgba(253, 200, 47, 0.5);
+        }
+
+        .mission-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            background: rgba(253, 200, 47, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .mission-card:hover .mission-icon {
+            background: rgba(253, 200, 47, 0.2);
+        }
+
+        .mission-icon svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--primary);
+        }
+
+        .mission-title {
+            font-weight: 700;
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .mission-description {
+            color: var(--muted);
+        }
+
+        .quote-card {
+            padding: 1.5rem;
+            background: rgba(253, 200, 47, 0.1);
+            border: 1px solid rgba(253, 200, 47, 0.2);
+            border-radius: 1rem;
+        }
+
+        .quote-card svg {
+            width: 2rem;
+            height: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .quote-text {
+            font-size: 1.125rem;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .quote-author {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* Editions Section */
+        .editions {
+            padding: 6rem 0;
+        }
+
+        .editions-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .editions-description {
+            color: var(--muted);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), transparent);
+        }
+
+        @media (min-width: 768px) {
+            .timeline::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .timeline-item {
+                width: 50%;
+                padding-left: 0;
+                padding-right: 2rem;
+            }
+
+            .timeline-item:nth-child(even) {
+                margin-left: 50%;
+                padding-left: 2rem;
+                padding-right: 0;
+            }
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--glow);
+        }
+
+        @media (min-width: 768px) {
+            .timeline-dot {
+                left: auto;
+                right: -7px;
+            }
+
+            .timeline-item:nth-child(even) .timeline-dot {
+                right: auto;
+                left: -7px;
+            }
+        }
+
+        .edition-card {
+            padding: 2rem;
+            background-color: var(--background-card);
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+        }
+
+        .edition-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .edition-badge {
+            padding: 0.25rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 9999px;
+        }
+
+        .badge-complete {
+            background-color: rgba(34, 197, 94, 0.2);
+            color: #22c55e;
+        }
+
+        .badge-upcoming {
+            background: rgba(253, 200, 47, 0.2);
+            color: var(--primary);
+        }
+
+        .edition-number {
+            font-size: 0.875rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .edition-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .edition-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            color: var(--muted);
+        }
+
+        .edition-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .edition-meta-item svg {
+            width: 1rem;
+            height: 1rem;
+            color: var(--primary);
+        }
+
+        .edition-description {
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .edition-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background-color: var(--background);
+            border-radius: 0.75rem;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+
+        .edition-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .highlight-tag {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.75rem;
+            background: rgba(253, 200, 47, 0.1);
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            color: var(--primary);
+        }
+
+        .highlight-tag svg {
+            width: 0.75rem;
+            height: 0.75rem;
+        }
+
+        .coaches-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .coaches-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .coaches-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .coach-tag {
+            padding: 0.5rem 1rem;
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+
+        .future-vision {
+            margin-top: 4rem;
+            padding: 2rem;
+            background: linear-gradient(to right, rgba(253, 200, 47, 0.1), transparent);
+            border: 1px dashed rgba(253, 200, 47, 0.3);
+            border-radius: 1.5rem;
+            text-align: center;
+        }
+
+        .future-vision-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .future-vision-text {
+            color: var(--muted);
+        }
+
+        /* Partners Section */
+        .partners {
+            padding: 6rem 0;
+            background-color: var(--background-card);
+        }
+
+        .partners-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .partners-description {
+            color: var(--muted);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .impact-stats {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 640px) {
+            .impact-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .impact-card {
+            padding: 1.5rem;
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            text-align: center;
+            transition: border-color 0.3s ease;
+        }
+
+        .impact-card:hover {
+            border-color: rgba(253, 200, 47, 0.5);
+        }
+
+        .impact-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.75rem;
+            background: rgba(253, 200, 47, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .impact-card:hover .impact-icon {
+            background: rgba(253, 200, 47, 0.2);
+        }
+
+        .impact-icon svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: var(--primary);
+        }
+
+        .impact-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .impact-label {
+            color: var(--muted);
+        }
+
+        .current-partners {
+            margin-bottom: 4rem;
+        }
+
+        .current-partners-title {
+            text-align: center;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--muted);
+            margin-bottom: 2rem;
+        }
+
+        .partners-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .partner-logo {
+            padding: 1rem 1.5rem;
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .partner-logo.placeholder {
+            background: transparent;
+            border-style: dashed;
+            color: var(--muted);
+            font-weight: 400;
+        }
+
+        .partnership-cta {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: linear-gradient(to bottom right, rgba(253, 200, 47, 0.2), rgba(253, 200, 47, 0.1), transparent);
+            border: 1px solid rgba(253, 200, 47, 0.2);
+            border-radius: 1.5rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .partnership-cta {
+                padding: 3rem;
+            }
+        }
+
+        .partnership-icon {
+            width: 3rem;
+            height: 3rem;
+            color: var(--primary);
+            margin: 0 auto 1.5rem;
+        }
+
+        .partnership-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .partnership-title {
+                font-size: 2rem;
+            }
+        }
+
+        .partnership-text {
+            color: var(--muted);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .partnership-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .partnership-buttons {
+                flex-direction: row;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .footer-tagline {
+            color: var(--muted);
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--background-card);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: rgba(253, 200, 47, 0.2);
+            border-color: var(--primary);
+        }
+
+        .social-link svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: var(--muted);
+            transition: color 0.3s ease;
+        }
+
+        .social-link:hover svg {
+            color: var(--primary);
+        }
+
+        .footer-email {
+            color: var(--muted);
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-email:hover {
+            color: var(--primary);
+        }
+
+        .footer-copyright {
+            color: var(--muted);
+            font-size: 0.75rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <nav class="navbar-inner">
+                <a href="#" class="logo">
+                    <span class="logo-primary">Rwanda</span><span>ballers</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#vision" class="nav-link">Vision</a>
+                    <a href="#editions" class="nav-link">Editions</a>
+                    <a href="#partners" class="nav-link">Partners</a>
+                    <a href="mailto:rwandaballers@gmail.com?subject=Partnership Inquiry" class="btn btn-primary glow-sm">Get in Touch</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <svg id="menuIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="4" x2="20" y1="12" y2="12"></line>
+                        <line x1="4" x2="20" y1="6" y2="6"></line>
+                        <line x1="4" x2="20" y1="18" y2="18"></line>
+                    </svg>
+                    <svg id="closeIcon" style="display: none;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 6 6 18"></path>
+                        <path d="m6 6 12 12"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="container mobile-menu-inner">
+            <a href="#vision" class="mobile-nav-link" onclick="closeMobileMenu()">Vision</a>
+            <a href="#editions" class="mobile-nav-link" onclick="closeMobileMenu()">Editions</a>
+            <a href="#partners" class="mobile-nav-link" onclick="closeMobileMenu()">Partners</a>
+            <a href="mailto:rwandaballers@gmail.com?subject=Partnership Inquiry" class="btn btn-primary btn-lg glow" style="width: 100%; margin-top: 1rem;" onclick="closeMobileMenu()">Get in Touch</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    Edition 2 • Coming July 2026
+                </div>
+                <h1 class="hero-title">
+                    Bridging Continents,<br><span class="text-gradient">Building Legacies</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Elite basketball training camp connecting Rwandan talent with international opportunities through professional coaching and global exposure.
+                </p>
+                <div class="hero-date">
+                    <span class="hero-date-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 2v4"></path>
+                            <path d="M16 2v4"></path>
+                            <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                            <path d="M3 10h18"></path>
+                        </svg>
+                        July 13-18, 2026
+                    </span>
+                    <span class="hero-date-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        Kigali, Rwanda
+                    </span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="mailto:rwandaballers@gmail.com?subject=Partnership Inquiry - Rwandaballers Basketball Camp" class="btn btn-primary btn-lg glow">
+                        Become a Partner
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.gofundme.com/f/rwandaballers-basketball-camp-edition-2" target="_blank" class="btn btn-outline btn-lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                        </svg>
+                        Support Edition 2
+                    </a>
+                </div>
+                <div class="hero-video">
+                    <iframe 
+                        src="https://www.youtube.com/embed/videoseries?list=PLXiSwDQ0rJtc0VyRNfvqf3leDjleMzBHZ" 
+                        title="Rwandaballers Documentary Series" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="social-proof">
+                    <a href="https://www.instagram.com/rwandaballers" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                        </svg>
+                        <span><strong>286K+</strong> profile views</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to explore</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m6 9 6 6 6-6"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision" id="vision">
+        <div class="container">
+            <div class="vision-grid">
+                <div class="fade-in">
+                    <span class="section-label">The Vision</span>
+                    <h2 class="section-title">
+                        Talent is Universal.<br><span class="text-gradient">Opportunity is Not.</span>
+                    </h2>
+                    <p class="vision-text">
+                        Growing up in Kigali, Rwanda, I witnessed countless athletes with world-class talent but limited access to the resources, exposure, and networks needed to reach their full potential.
+                    </p>
+                    <p class="vision-text">
+                        After pursuing my own basketball journey through Belgium, the Netherlands, and Luxembourg—while building a career in tech consulting—I realized I had a unique opportunity to give back.
+                    </p>
+                    <p class="vision-text highlight">
+                        Rwandaballers was born from a simple belief: every talented athlete deserves a chance to showcase their abilities on a global stage.
+                    </p>
+                    <div class="founder-card">
+                        <div class="founder-avatar">BN</div>
+                        <div>
+                            <h4 class="founder-name">Benjamin Ngarambe</h4>
+                            <p class="founder-role">Founder & Pro Basketball Player</p>
+                            <p class="founder-locations">Rwanda • Belgium • Netherlands • Luxembourg</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mission-cards fade-in">
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                <path d="M2 12h20"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mission-title">Global Connections</h3>
+                            <p class="mission-description">Bringing international coaches, scouts, and opportunities directly to African talent, bridging continents through basketball.</p>
+                        </div>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                <path d="M4 22h16"></path>
+                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mission-title">Elite Training</h3>
+                            <p class="mission-description">Professional-level training sessions, physiotherapy, and mentorship from experienced coaches who have competed at the highest levels.</p>
+                        </div>
+                    </div>
+                    <div class="mission-card">
+                        <div class="mission-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="mission-title">Community Impact</h3>
+                            <p class="mission-description">Beyond basketball—building confidence, discipline, and life skills that empower the next generation of Rwandan leaders.</p>
+                        </div>
+                    </div>
+                    <div class="quote-card">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V21c0 1 0 1 1 1z"></path>
+                            <path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>
+                        </svg>
+                        <p class="quote-text">
+                            "My dream is to establish a permanent training hub in Rwanda—a space where athletes can train, recover, and learn year-round."
+                        </p>
+                        <p class="quote-author">— Benjamin Ngarambe</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editions Section -->
+    <section class="editions" id="editions">
+        <div class="container">
+            <div class="editions-header fade-in">
+                <span class="section-label">Camp Editions</span>
+                <h2 class="section-title">Building the <span class="text-gradient">Movement</span></h2>
+                <p class="editions-description">From our inaugural camp to international collaborations, each edition brings us closer to our vision of a permanent training hub.</p>
+            </div>
+            <div class="timeline">
+                <!-- Edition 1 -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="edition-card">
+                        <div class="edition-header">
+                            <span class="edition-badge badge-complete">✓ Complete</span>
+                            <span class="edition-number">Edition 1</span>
+                        </div>
+                        <h3 class="edition-title">The Foundation</h3>
+                        <div class="edition-meta">
+                            <span class="edition-meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M8 2v4"></path>
+                                    <path d="M16 2v4"></path>
+                                    <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                    <path d="M3 10h18"></path>
+                                </svg>
+                                August 4-9, 2025
+                            </span>
+                            <span class="edition-meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Zaria Court, Kigali
+                            </span>
+                        </div>
+                        <p class="edition-description">
+                            The inaugural camp that launched the Rwandaballers movement. Six days of intensive training, community building, and laying the groundwork for future editions.
+                        </p>
+                        <div class="edition-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">15</div>
+                                <div class="stat-label">Elite Athletes</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">6</div>
+                                <div class="stat-label">Training Days</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">2</div>
+                                <div class="stat-label">Sessions/Day</div>
+                            </div>
+                        </div>
+                        <div class="edition-highlights">
+                            <span class="highlight-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                                Skills Development
+                            </span>
+                            <span class="highlight-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                                Team Building
+                            </span>
+                            <span class="highlight-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                                Documentary Series
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Edition 2 -->
+                <div class="timeline-item fade-in">
+                    <div class="timeline-dot"></div>
+                    <div class="edition-card">
+                        <div class="edition-header">
+                            <span class="edition-badge badge-upcoming">★ Upcoming</span>
+                            <span class="edition-number">Edition 2</span>
+                        </div>
+                        <h3 class="edition-title">International Exchange</h3>
+                        <div class="edition-meta">
+                            <span class="edition-meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M8 2v4"></path>
+                                    <path d="M16 2v4"></path>
+                                    <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                    <path d="M3 10h18"></path>
+                                </svg>
+                                July 13-18, 2026
+                            </span>
+                            <span class="edition-meta-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                Kigali, Rwanda
+                            </span>
+                        </div>
+                        <p class="edition-description">
+                            Taking it international with Donar Groningen U19 joining from the Netherlands. Cross-cultural exchange, elite competition, and professional physiotherapy support.
+                        </p>
+                        <div class="edition-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">2</div>
+                                <div class="stat-label">Countries</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">6</div>
+                                <div class="stat-label">Training Days</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1</div>
+                                <div class="stat-label">Exhibition Game</div>
+                            </div>
+                        </div>
+                        <div class="edition-highlights">
+                            <span class="highlight-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path>
+                                </svg>
+                                International Coaches
+                            </span>
+                            <span class="highlight-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                    <path d="M4 22h16"></path>
+                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                                </svg>
+                                Donar U19 Exhibition
+                            </span>
+                            <span class="highlight-tag">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+                                </svg>
+                                Pro Physiotherapy
+                            </span>
+                        </div>
+                        <div class="coaches-section">
+                            <h4 class="coaches-title">Coaching Staff</h4>
+                            <div class="coaches-list">
+                                <span class="coach-tag">Benjamin Ngarambe</span>
+                                <span class="coach-tag">Jan Nowicki</span>
+                                <span class="coach-tag">Roger Muneza</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="future-vision fade-in">
+                <h3 class="future-vision-title">The Future: The Rwandaballers Hub</h3>
+                <p class="future-vision-text">A permanent training facility in Rwanda—where athletes can train, recover, and develop year-round.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners" id="partners">
+        <div class="container">
+            <div class="partners-header fade-in">
+                <span class="section-label">Partner With Us</span>
+                <h2 class="section-title">Join the <span class="text-gradient">Movement</span></h2>
+                <p class="partners-description">Be part of something bigger. Partner with Rwandaballers to develop African basketball talent and create lasting impact.</p>
+            </div>
+            <div class="impact-stats fade-in">
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="impact-value">286K+</div>
+                    <div class="impact-label">Instagram Profile Views</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="impact-value">15+</div>
+                    <div class="impact-label">Elite Athletes Trained</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+                            <path d="M16 7h6v6"></path>
+                        </svg>
+                    </div>
+                    <div class="impact-value">2</div>
+                    <div class="impact-label">Camp Editions</div>
+                </div>
+            </div>
+            <div class="current-partners fade-in">
+                <h3 class="current-partners-title">Proudly Supported By</h3>
+                <div class="partners-logos">
+                    <div class="partner-logo">Gaminate</div>
+                    <div class="partner-logo">Donar Groningen</div>
+                    <div class="partner-logo placeholder">Your Brand Here</div>
+                </div>
+            </div>
+            <div class="partnership-cta fade-in">
+                <svg class="partnership-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m11 17 2 2a1 1 0 1 0 3-3"></path>
+                    <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path>
+                    <path d="m21 3 1 11h-2"></path>
+                    <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path>
+                    <path d="M3 4h8"></path>
+                </svg>
+                <h3 class="partnership-title">Become a Partner</h3>
+                <p class="partnership-text">
+                    Whether you're a brand, organization, or individual looking to make a difference, we'd love to explore how we can work together to develop the next generation of African talent.
+                </p>
+                <div class="partnership-buttons">
+                    <a href="mailto:rwandaballers@gmail.com?subject=Partnership Inquiry - Rwandaballers Basketball Camp" class="btn btn-primary btn-lg glow">
+                        Contact for Partnerships
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.gofundme.com/f/rwandaballers-basketball-camp-edition-2" target="_blank" class="btn btn-outline btn-lg">
+                        Donate to Edition 2
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">
+                        <span class="logo-primary">Rwanda</span><span>ballers</span>
+                    </div>
+                    <p class="footer-tagline">Bridging Continents, Building Legacies</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/rwandaballers" target="_blank" class="social-link" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@Rwandaballers" target="_blank" class="social-link" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+                            <path d="m10 15 5-3-5-3z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/people/Rwandaballers/61561553498498/" target="_blank" class="social-link" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/rwandaballers" target="_blank" class="social-link" aria-label="X">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/rwandaballers/" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect width="4" height="12" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                </div>
+                <a href="mailto:rwandaballers@gmail.com" class="footer-email">rwandaballers@gmail.com</a>
+                <p class="footer-copyright">© 2025 Rwandaballers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+        let isMenuOpen = false;
+
+        function toggleMobileMenu() {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.classList.toggle('open', isMenuOpen);
+            menuIcon.style.display = isMenuOpen ? 'none' : 'block';
+            closeIcon.style.display = isMenuOpen ? 'block' : 'none';
+            document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            isMenuOpen = false;
+            mobileMenu.classList.remove('open');
+            menuIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
